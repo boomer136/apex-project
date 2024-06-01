@@ -1,0 +1,18 @@
+
+{
+    "customerType": "Individual",
+    "applicants":[
+        {
+            "firstName": "Caleb",
+            "lastName": "Murphy",
+            "email": "calebmurphy136@gmail.com",
+            "identity": {
+                "name": "Caleb Murphy",
+                "dateOfBirth": "2000-02-29",
+                "citizenshipCountry": "USA"
+            }
+        }
+    ],
+    "applicantSignature": "Caleb Murphy",
+    "principalApprover": "Jane Smith"
+}
