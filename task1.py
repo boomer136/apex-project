@@ -16,15 +16,11 @@ credentials = {
 payload = {
     'username':credentials['username'],
     'entity':credentials['entity'],
-    'datetime':datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    'datetime':datetime.datetime.now(datetime.timezone.utc).isoformat()
 }
 
 # Encode the payload with the shared secret using HS512 algorithm
 encoded_jws = jwt.encode(payload, credentials['sharedSecret'], algorithm='HS512')
 
 print("Encoded JWS:\n", encoded_jws)
-
-# # Decode the JWS 
-# decoded_payload = jwt.decode(encoded_jws, credentials['sharedSecret'], algorithms=['HS512'])
-# print("Decoded JWS:\n", decoded_payload)
 
