@@ -1,18 +1,15 @@
-import base64
-import hmac
-import hashlib
-import json
+import jwt 
 import datetime
-import jwt
 
-# Credentials
+
+# Given Credentials Dictionary for the JWT payload and the secret key used for signing 
 credentials = {
     'username': 'jws-test',
     'entity': 'apex',
     'sharedSecret': '1234567890'
 }
 
-# Create a payload 
+# Create a payload. Note (isoformat() converts the datetime to a string in ISO 8601 format)
 payload = {
     'username':credentials['username'],
     'entity':credentials['entity'],

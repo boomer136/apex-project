@@ -1,8 +1,7 @@
 import hashlib
 import base64
-import json
 
-
+# Specify the path to the form file and read its contents
 form_file_path = 'test_form.json'
 
 with open(form_file_path, 'r') as file:
